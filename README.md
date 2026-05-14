@@ -27,7 +27,7 @@ This project simulates discussions between multiple LLM-based agents with differ
 ## Project Structure
 
 ```text
-your_project/
+project/
 │
 ├── main.py
 ├── prompts.py
@@ -36,12 +36,13 @@ your_project/
 ├── utils.py
 ├── evaluation.py
 └── logs/
+```
 
 ## Requirements
 
 - Python 3.10+
 - **Ollama** installed and running locally
-- A local model downloaded in **Ollama**, for example:
+- A local model downloaded in **Ollama**, in this case:
     - `mistral`
     - `gemma`
 
@@ -127,3 +128,16 @@ Agents can see recent conversation history and the moderator summary.
 
 ## Evaluation
 
+...
+
+## Author
+
+Irene Santana Martin
+
+MSc Artificial Intelligence
+
+University of Technology Nuremberg (UTN)
+
+## License
+
+GPL-3.0
