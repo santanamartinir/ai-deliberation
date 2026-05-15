@@ -5,6 +5,10 @@ This file contains the logic for the different discussion protocols:
 - direct
 - moderated
 - delphi
+As well, as the different communication topologies:
+- fully_connected
+- sequential
+- star
 
 Each protocol defines how agents see previous information and how the
 moderator is used.
