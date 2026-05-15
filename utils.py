@@ -12,15 +12,15 @@ of the project, such as:
 import json
 import re
 
-
+"""
 def parse_json_response(text):
-    """
+    
     Try to read JSON from the model output.
 
     Sometimes the model returns perfect JSON.
     Sometimes it returns extra text around the JSON.
     This function tries both cases.
-    """
+    
     text = text.strip()
 
     # First try: parse the full text directly
@@ -35,7 +35,37 @@ def parse_json_response(text):
         return json.loads(match.group(0))
 
     raise ValueError(f"Could not parse JSON from model output:\n{text}")
+"""
 
+def parse_json_response(text):
+    """
+    Robust JSON parser for model outputs.
+
+    1. Try direct parsing
+    2. Try extracting JSON block
+    3. If everything fails, return fallback instead of crashing
+    """
+    text = text.strip()
+
+    # Try direct parsing
+    try:
+        return json.loads(text)
+    except json.JSONDecodeError:
+        pass
+
+    # Try extracting JSON from text
+    match = re.search(r"\{.*\}", text, re.DOTALL)
+    if match:
+        try:
+            return json.loads(match.group(0))
+        except json.JSONDecodeError:
+            pass
+
+    # Fallback (IMPORTANT: no crash)
+    return {
+        "error": "invalid_json",
+        "raw_output": text
+    }
 
 def clean_payload(payload, fallback_stance):
     """
