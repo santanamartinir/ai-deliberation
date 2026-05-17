@@ -34,7 +34,7 @@ Do NOT repeat arguments from previous rounds.
 
 Each response must introduce at least one new idea.
 
-Your goal is not only to defend your position, but to move the group toward a shared conclusion.
+Your goal is to move toward a shared group decision.
 
 Style:
 - direct
@@ -94,7 +94,7 @@ Do NOT repeat arguments from previous rounds.
 
 Each response must introduce at least one new idea.
 
-Your goal is not only to defend your position, but to move the group toward a shared conclusion.
+Your goal is to move toward a shared group decision.
 
 Style:
 - natural
@@ -156,7 +156,7 @@ Do NOT repeat arguments from previous rounds.
 
 Each response must introduce at least one new idea.
 
-Your goal is not only to defend your position, but to move the group toward a shared conclusion.
+Your goal is to move toward a shared group decision.
 
 Style:
 - natural
